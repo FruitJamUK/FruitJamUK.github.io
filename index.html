@@ -4,8 +4,22 @@
   <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
   <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <style>
+    .name{
+          font-family:"courier new"; color:white;
+          position: relative; top: 50%; transform: translateY(-50%);
+    }
+    .name>span{text-align:center; display:block}
+    .circle{
+      border-radius: 50%;
+      width: 500px; height: 500px; margin: auto;
+      background: #444; opacity: 8.0;
+    }
+  </style>
 </head>
 <body>
-  <h1><span>David</span><span>Sharp</span><span>.codes</span></h1>
+  <div class="circle">
+    <h1 class="name"><span>David</span><span>Sharp</span><span>codes</span></h1>
+  </div>
   <p>Hello, World!</p>
 </body>
