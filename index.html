@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <head>
   <title>//davidsharp.codes</title>
-  <!--Material Design Lite-->
+  <!--Material Design Lite, unused, double-check there are no styles the page is using from it-->
   <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
   <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <style>
-    @font-face {/* TODO: Change hyperlink, this makes me sad :( */
+    @font-face {/* TODO: Add the font license*/
       font-family: "Lazer 84";
       src: url(Lazer84.ttf) format("truetype");
     }
@@ -21,14 +21,48 @@
       background: #444; opacity: 8.0;
     }
     body{
-      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='8' height='10'><line id='l1' x1='0.5' y1='0' x2='0.5' y2='10' stroke='black' stroke-width='1' stroke-dasharray='2.5,5'/><line id='l2' x1='4.5' y1='0' x2='4.5' y2='10' stroke='black' stroke-width='1' stroke-dasharray='0,2.5,5,2.5'/></svg>");
-      background-repeat: repeat;
+      /*background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='8' height='10'><line id='l1' x1='0.5' y1='0' x2='0.5' y2='10' stroke='black' stroke-width='1' stroke-dasharray='2.5,5'/><line id='l2' x1='4.5' y1='0' x2='4.5' y2='10' stroke='black' stroke-width='1' stroke-dasharray='0,2.5,5,2.5'/></svg>");
+      background-repeat: repeat;*/
+      background: linear-gradient(15deg, #44dd44, #dddd44);
+      text-shadow: -1px 1px 2px #222;
+      flex:1;
+      height: 100%;
     }
+    .email{color:#DCF;font-family: "Fira Code", "Courier New", monospace;}
   </style>
 </head>
 <body>
   <div class="circle">
     <h1 class="name"><span>David</span><span>Sharp</span><span>codes</span></h1>
   </div>
-  <p style="text-align:center">email me: hello@</p>
+  <p class="email" style="text-align:center">email me: hello@</p>
 </body>
+
+<!--
+body {
+    font-family: "Fira Code", "Courier New", monospace;
+    font-size: large;
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: black;
+    background: linear-gradient(15deg, #44dd44, #dddd44);
+    height: 100vh;
+    text-shadow: -1px 1px 2px #222;
+  }
+  a {color:#DCF;text-decoration-line:none;}
+  .shortcut {
+    border-radius: 4px;
+    color: #eee;
+    background-color: #333;
+    font-family: "Monaco", monospace;
+    font-size: medium;
+    letter-spacing: 3px;
+    padding: 4px;
+    text-shadow: none;
+  }
+  .content {
+    padding: 10px;
+  }
+-->
