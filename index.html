@@ -25,6 +25,12 @@
       height: 100vh;
       overflow-y: hidden;
     }
+    .inner{height:100%;width:100%;display:flex;flex-wrap:wrap;}
+    .child-block{background-color:black;min-height:25%;min-width:50%;max-width:100%;max-height:50%;}
+      .child-block:nth-child(4n){ background-color:yellow; }
+      .child-block:nth-child(4n+1){ background-color:red; }
+      .child-block:nth-child(4n+2){ background-color:blue; }
+      .child-block:nth-child(4n+3){ background-color:green; }
     .email{color:#DCF;font-family: "Fira Code", "Courier New", monospace;}
   </style>
 </head>
@@ -35,12 +41,16 @@
     </div>
     <p class="email" style="text-align:center">email me: hello@</p>
   </div>
+
   <!--
   <div class="block">
-    <div class="circle">
-      <h1 class="name"><span>David</span><span>Sharp</span><span>codes</span></h1>
+    <div class="inner">
+      <div class="child-block"></div>
+      <div class="child-block"></div>
+      <div class="child-block"></div>
+      <div class="child-block"></div>
     </div>
-    <p class="email" style="text-align:center">email me: hello@</p>
   </div>
   -->
+
 </body>
