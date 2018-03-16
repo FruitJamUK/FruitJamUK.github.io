@@ -51,7 +51,7 @@
     <div class="circle" data-tilt>
       <h1 class="name"><span>david</span><span>sharp</span><span>codes</span></h1>
       <div class="links">
-        <a class="ion ion-email" href="mailto:hello+viawebsite@davidsharp.codes"></a>・
+        <a class="ion ion-email" id="my-email"></a>・
         <a class="ion ion-social-twitter" href="https://twitter.com/elitefreq"></a>・
         <a class="ion ion-social-github" href="https://github.com/davidsharp"></a>
       </div>
@@ -73,4 +73,16 @@
   -->
 
 <script type="text/javascript" src="./vanilla-tilt.min.js"></script>
+<script type="text/javascript">
+window.onload = function() {
+  document.body.className += " loaded";
+}
+
+let emailGen=function(genWith){
+  document.getElementById('my-email').href='mailto:'+'hello'+(genWith?'+'+genWith:'+viawebsite')+'@'+window.location.hostname
+}
+emailGen(Date.now())
+
+
+</script>
 </body>
