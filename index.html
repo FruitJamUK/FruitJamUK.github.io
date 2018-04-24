@@ -24,11 +24,13 @@
     .circle{
       border-radius: 50%;
       width: 500px; height: 500px; margin: auto;
+      text-shadow: -1px 1px 2px #222;
       background: linear-gradient(0deg, #777, #222); opacity: 8.0;
       transform-style: preserve-3d;
       /*transform: translate3D(0, 0, 20px);*/
     }
     .popover{
+      display: none;
       position: relative;
       top: -50px;
       z-index: 1000;
@@ -46,6 +48,12 @@
       transform-style: preserve-3d;
       /*border-right:;*/
     }
+    .popover-text{ 
+      display: none;
+      padding: 5px;
+      font-family: Helvetica, sans-serif;
+    }
+    .active{ display: block; }
     .image-circle{
       border-radius: 50%;
       width: 20vh; height: 20vh; margin: auto;
@@ -54,7 +62,6 @@
     body{ margin:0; }
     .block{
       background: linear-gradient(15deg, #44dd44, #dddd44);
-      text-shadow: -1px 1px 2px #222;
       flex:1;
       height: 100vh;
       overflow-y: hidden;
@@ -87,13 +94,21 @@
         <!--<a class="ion" href="https://glitch.com/@davidsharp">🎏</a>-->
       </div>
     </div>
-    <!--<div class="popover">
-      <p class="popover-text email"></p>
-      <p class="popover-text twitter"></p>
-      <p class="popover-text instagram"></p>
-      <p class="popover-text github"></p>
-      <p class="popover-text glitch"></p>
-    </div>-->
+    <div class="popover">
+      <div id="popover-text-email" class="popover-text email">
+        <h1><div class="ion ion-email" id="my-email"/> Email</h1>
+        <hr>
+        <p>Email me for anything enquiries, questions, etc</p>
+      </div>
+      <div class="popover-text twitter active">
+        <h1><div class="ion ion-social-twitter"></div> Twitter &mdash; EliteFreq</h1>
+        <hr>
+        <p>Twitter's where I talk trash and doesn't really do me any favours in looking employable</p>
+      </div>
+      <div class="popover-text instagram"><h1> Email &mdash; davidsharp</h1></div>
+      <div class="popover-text github"><h1> Email &mdash; davidsharp</h1></div>
+      <div class="popover-text glitch"><h1> Email &mdash; davidsharp</h1></div>
+    </div>
     <!--<p class="email" style="text-align:center">email me: hello@</p>-->
   </div>
 
