@@ -124,7 +124,7 @@
         <!--<a class="ion" href="https://glitch.com/@davidsharp">🎏</a>-->
       </div>
     </div>
-    <div class="popover">
+    <div id="popover" class="popover">
       <div id="popover-text-email" class="popover-text email">
         <h1><div class="ion ion-email" id="my-email"/> Email</h1>
         <hr>
@@ -179,6 +179,22 @@ let emailGen=function(genWith){
 }
 emailGen(Date.now())
 
+function addClass(el,cn){
+  if (el.classList)
+    el.classList.add(cn);
+  else
+    el.className += ' ' + cn;
+}
+function rmClass(el,cn){
+  if (el.classList)
+    el.classList.remove(cn);
+  else
+    el.className = el.className.replace(new RegExp('(^|\\b)' + cn.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+}
+
+let pop = document.getElementById('popover')
+
+//addClass(pop,'active l90')
 
 </script>
 </body>
