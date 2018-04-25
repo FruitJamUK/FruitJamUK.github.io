@@ -42,18 +42,40 @@
       transform-style: preserve-3d;
       /*transform: translate3D(0, 0, 20px);*/
     }
-    .popover::before{
-      z-index: 1000;
-      background: #eee; opacity: 8.0;
-      transform-style: preserve-3d;
-      /*border-right:;*/
-    }
     .popover-text{ 
       display: none;
       padding: 5px;
       font-family: Helvetica, sans-serif;
     }
     .active{ display: block; }
+    .popover:after, .popover:before {
+      bottom: 100%;
+      /*left: 50%;*/
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+    .popover:after {
+      border-color: rgba(47, 64, 74, 0);
+      border-bottom-color: #eee;
+      border-width: 10px;
+      margin-left: -10px;
+    }
+    .popover:before {
+      border-color: rgba(194, 225, 245, 0);
+      border-bottom-color: #eee;
+      border-width: 16px;
+      margin-left: -16px;
+    }
+    .l10.popover:after, .l10.popover:before{left: 10%;}
+    .l30.popover:after, .l30.popover:before{left: 30%;}
+    .l50.popover:after, .l50.popover:before{left: 50%;}
+    .l70.popover:after, .l70.popover:before{left: 70%;}
+    .l90.popover:after, .l90.popover:before{left: 90%;}
+
     .image-circle{
       border-radius: 50%;
       width: 20vh; height: 20vh; margin: auto;
@@ -92,7 +114,7 @@
         <a class="ion ion-social-twitter" href="https://twitter.com/elitefreq"></a>・
         <a class="ion ion-social-instagram" href="https://www.instagram.com/coin.op/"></a>・
         <a class="ion ion-social-github" href="https://github.com/davidsharp"></a>・
-        <a class="ion glitch-fish" href="https://glitch.com/@davidsharp"><img src="./glitch-mask-icon.svg"></a>
+        <a class="ion glitch-fish" href="https://glitch.com/@davidsharp"><img class="inverted" src="./glitch-mask-icon.svg"></a>
         <!--<a class="ion" href="https://glitch.com/@davidsharp">🎏</a>-->
       </div>
     </div>
