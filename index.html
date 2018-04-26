@@ -155,19 +155,6 @@
     <div style="height:3px;width:3px;z-index:9001;position:absolute;top:5px;left:5px;"></div>
   </a>
 
-  <!--
-  <div class="block">
-    <div class="inner">
-      <div class="child-block">
-        <image class="image-circle" src="./david-pixel-sort-gradient.png">
-      </div>
-      <div class="child-block"></div>
-      <div class="child-block"></div>
-      <div class="child-block"></div>
-    </div>
-  </div>
-  -->
-
 <script type="text/javascript" src="./vanilla-tilt.min.js"></script>
 <script type="text/javascript">
 window.onload = function() {
@@ -192,7 +179,24 @@ function rmClass(el,cn){
     el.className = el.className.replace(new RegExp('(^|\\b)' + cn.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
 }
 
+function hover(e,i){console.log('event:',e)
+  unhover()
+  addClass(e, 'active l'+((i*20)+10))
+  addClass(document.getElementsByClassName('popover-text')[i],'active')
+}
+function unhover(e){
+  rmClass(e, 'active l10 l30 l50 l70 l90')
+  document.getElementsByClassName('popover-text').forEach(function(c){rmClass(c,'active')})
+}
+
 let pop = document.getElementById('popover')
+
+let icons = document.querySelectorAll('.links a')
+
+icons.forEach(function(c,i){
+  c.onmouseover=function(e){console.log('event:',e);hover(pop,i)}
+  c.onmouseout=function(e){console.log('event:',e);unhover(pop)}
+})
 
 //addClass(pop,'active l90')
 
