@@ -108,7 +108,7 @@
       .child-block:nth-child(4n+2){ background-color:#4498dd; }
       .child-block:nth-child(4n+3){ background-color:#8944dd; }
       .child-block:nth-child(4n){   background-color:#98dd44; }
-    .email{color:#DCF;font-family: "Balsamiq Sans", "Fira Code", "Courier New", monospace;}
+    /*email{color:#DCF;font-family: "Balsamiq Sans", "Fira Code", "Courier New", monospace;}*/
   </style>
 </head>
 <body>
@@ -168,25 +168,25 @@ emailGen(Date.now())
 
 function addClass(el,cn){
   if (el.classList)
-    el.classList.add(cn);
+    cn.split(' ').forEach(function(c){el.classList.add(c)});
   else
     el.className += ' ' + cn;
 }
 function rmClass(el,cn){
   if (el.classList)
-    el.classList.remove(cn);
+    cn.split(' ').forEach(function(c){el.classList.remove(c)});
   else
     el.className = el.className.replace(new RegExp('(^|\\b)' + cn.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
 }
 
-function hover(e,i){console.log('event:',e)
-  unhover()
+function hover(e,i){
+  unhover(e)
   addClass(e, 'active l'+((i*20)+10))
   addClass(document.getElementsByClassName('popover-text')[i],'active')
 }
 function unhover(e){
   rmClass(e, 'active l10 l30 l50 l70 l90')
-  document.getElementsByClassName('popover-text').forEach(function(c){rmClass(c,'active')})
+  Array.prototype.forEach.call(document.getElementsByClassName('popover-text'),function(c){rmClass(c,'active')})
 }
 
 let pop = document.getElementById('popover')
