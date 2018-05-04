@@ -106,6 +106,9 @@
       filter: invert(1);
     }
 
+    #ball {
+      transform: translate3D(0, -50%, -20px);
+    }
     #ball svg {
       -webkit-animation: rotation 7s infinite linear;
      }
@@ -138,6 +141,18 @@
         <a class="ion glitch-fish" href="https://glitch.com/@davidsharp"><img class="inverted" src="./glitch-mask-icon.svg"></a>
         <!--<a class="ion" href="https://glitch.com/@davidsharp">🎏</a>-->
       </div>
+      <div id="ball">
+          <svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <mask id="Mask">
+                <circle cx="250" cy="250" r="250" fill="white"  />
+              </mask>
+            </defs>
+            <rect x="0" y="0" width="500" height="250" mask="url(#Mask)" fill="red"/>
+            <path id="split" d="M 0 500  M 0 250 Q 250 125 500 250 M 500 500" fill="rgba(255,255,255,0.3)" mask="url(#Mask)"/>
+            <rect x="0" y="250" width="500" height="500" fill="rgba(255,255,255,0.3)" mask="url(#Mask)"/>
+          </svg>
+        </div>
     </div>
     <div id="popover" class="popover">
       <div class="popover-text email">
