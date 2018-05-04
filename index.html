@@ -105,6 +105,20 @@
       -webkit-filter: invert(1);
       filter: invert(1);
     }
+
+    #ball svg {
+      -webkit-animation: rotation 7s infinite linear;
+     }
+
+    @-webkit-keyframes rotation {
+      from {
+        -webkit-transform: rotate(0deg);
+      }
+      to {
+        -webkit-transform: rotate(359deg);
+      }
+    }
+
       .child-block:nth-child(4n+1){ background-color:#dd8944; }
       .child-block:nth-child(4n+2){ background-color:#4498dd; }
       .child-block:nth-child(4n+3){ background-color:#8944dd; }
@@ -150,6 +164,21 @@
         <p>Glitch is a coding playground for me, a couple of fun Node projects live there too</p></div>
     </div>
     <!--<p class="email" style="text-align:center">email me: hello@</p>-->
+    <!--<div id="ball">
+      <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <clipPath id="cut-off-bottom">
+            <rect x="0" y="0" width="200" height="100" />
+          </clipPath>
+          <mask id="Mask">
+            <circle cx="100" cy="100" r="100" fill="white"  />
+          </mask>
+        </defs>
+        <rect x="0" y="0" width="200" height="100" mask="url(#Mask)" fill="red"/>
+        <path id="split" d="M 0 200  M 0 100 Q 100 50 200 100 M 200 200" fill="rgba(255,255,255,0.3)" mask="url(#Mask)"/>
+        <rect x="0" y="100" width="200" height="200" fill="rgba(255,255,255,0.3)" mask="url(#Mask)"/>
+      </svg>
+    </div>-->
   </div>
 
   <a href="http://dwitter.net/u/davidsharp">
