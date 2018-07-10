@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+  <title>ｄａｖｉｄｓｈａｒｐｃｏｄｅｓ | | デイビッド・シャープ・コードズ</title>
+  <style>
+    #main {margin: auto; width:100%; max-width:350px;}
+    #hello #top, #hello #body{width:100%}
+    #hello #body #image-wrapper {float: left;}
+    #hello #body #right-border {float: right;}
+    #top *, #body * {display: inline-block;}
+    #top * {font-size:50em;}
+
+    .dot {background-color:blue;
+    height:55px;width:55px;border-radius:50%;min-width:45px;max-width:55px; margin:5px;}
+    #hello .dot:nth-of-type(odd) {background-color:brown;}
+    #top-border {right:0;}
+    #top-border .dot {display: inline-block;}
+    #right-border .dot {display: block;}
+
+
+
+
+/*.grid-container {
+  background-color: seashell;
+  display: grid;
+  height: 100%;
+  grid-template-columns: 280px 1fr 70px;
+  grid-template-rows: 70px 280px;
+  grid-template-areas: "name border-top border-top" "pic text border-right";
+}
+
+.pic {
+  grid-area: pic;
+}
+
+.text {
+  grid-area: text;
+}
+
+.name {
+  grid-area: name;
+}
+
+.border-top {
+  grid-area: border-top;
+  background-image: url(test.png);
+  background-repeat: space;
+}
+
+.border-right {
+  grid-area: border-right;
+  background-image: url(test.png);
+  background-repeat: space;
+}*/
+  </style>
+</head>
+<body>
+    <!--<div id="main" class="grid-container">
+        <div class="pic">
+        </div>
+        <div class="text">
+          lalala
+        </div>
+        <div class="name">
+            david
+        </div>
+        <div class="border-top">ooooo
+        </div>
+        <div class="border-right">
+          o<br>o<br>o<br>o<br>o
+        </div>
+      </div>-->
+  <div id="main">
+    <div id="hello">
+      <div id="top">
+        <div id="name">david</div>
+        <div id="top-border"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+      </div>
+      <div id="body">
+        <div id="image-wrapper">image</div>
+        <div id="label">label</div>
+        <div id="right-border"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+      </div>
+    </div>
+  </div>
+</body>
