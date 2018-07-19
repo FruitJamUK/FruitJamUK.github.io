@@ -207,7 +207,7 @@ window.onload = function() {
 }
 
 let emailGen=function(genWith){
-  document.getElementById('my-email').href='mailto:'+'hello'+(genWith?'+'+genWith:'+viawebsite')+'@'+window.location.hostname
+  document.getElementById('my-email').href='mailto:'+'hello'+(genWith?genWith:'viawebsite')+'@'+window.location.hostname
 }
 emailGen(Date.now())
 
