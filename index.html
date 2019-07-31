@@ -95,11 +95,10 @@
       height: 100vh;
       overflow-y: hidden;
     }
-    .inner{height:100%;width:100%;display:flex;flex-wrap:wrap;}
-  .child-block{background-color:white; flex: 50%;/*height:50%;width:50%;min-height:25%;min-width:200px;max-width:100%;max-height:50%;*/}
     .glitch-fish img{
       height: 32px;
       width: 28px;
+      vertical-align: baseline;
     }
     .inverted{
       -webkit-filter: invert(1);
@@ -108,6 +107,7 @@
 
     #ball {
       transform: translate3D(0, -50%, -20px);
+      margin:auto;
     }
     #ball svg {
       -webkit-animation: rotation 7s infinite linear;
@@ -121,12 +121,7 @@
         -webkit-transform: rotate(359deg);
       }
     }
-
-      .child-block:nth-child(4n+1){ background-color:#dd8944; }
-      .child-block:nth-child(4n+2){ background-color:#4498dd; }
-      .child-block:nth-child(4n+3){ background-color:#8944dd; }
-      .child-block:nth-child(4n){   background-color:#98dd44; }
-    /*email{color:#DCF;font-family: "Balsamiq Sans", "Fira Code", "Courier New", monospace;}*/
+    .inner{height:100%;width:100%;display:flex;flex-wrap:wrap;flex-direction:column;}
   </style>
 </head>
 <body>
@@ -239,9 +234,11 @@ let pop = document.getElementById('popover')
 let icons = document.querySelectorAll('.links a')
 
 icons.forEach(function(c,i){
-  c.onmouseover=function(e){console.log('event:',e);hover(pop,i)}
-  c.onmouseout=function(e){console.log('event:',e);unhover(pop)}
+  c.onmouseover=function(e){hover(pop,i)}
+  c.onmouseout=function(e){e.stopPropagation()/*; unhover(pop)*/}
 })
+
+let circle = document.getElementsByClassName('circle')[0].onmouseout=function(e){unhover(pop)}
 
 //addClass(pop,'active l90')
 
